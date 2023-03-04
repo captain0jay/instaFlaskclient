@@ -61,8 +61,8 @@ def postit():
     return redirect('/')
 
 if __name__ == "__main__":
-    bot.login(username="srightmedia",password="Captainjay@32", is_threaded=True)
-    client = pymongo.MongoClient("mongodb+srv://ForeverKnight:Captainjay32@cluster0.au5htbm.mongodb.net/?retryWrites=true&w=majority")
+    bot.login(username="user",password="passlink", is_threaded=True)
+    client = pymongo.MongoClient("db-link")
     print(client)
     db = client['db-name']
     collection=db['post']
