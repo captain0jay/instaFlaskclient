@@ -1,0 +1,9 @@
+#import certifi
+#ca = certifi.where()
+
+#tweets.append(posts["post_text"])
+#tweets["post_text"] = posts["post_text"]
+#tweets["file_name"] = str("imagis/" + posts["file_name"])
+
+#,connect=False)#, tls=True,tlsAllowInvalidCertificates=True)#,tlsCAFile=certifi.where())#,ssl=True,
+#ssl_cert_reqs=ssl.CERT_NONE)

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block base %}
+<div class="container d-flex flex-wrap align-items-center">
+{% for tweet in tweets%}
+<form method="post" action="/posting">
+<div class="card mx-2 my-2" style="width: 18rem;">
+    <img class="card-img-top" src="static/{{ tweet.file_loc }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Post:</h5>
+      <input type="text" class="form-control border-0" value="{{tweet.file_name}}" name="filename">
+      <textarea type="text" class="form-control border-0" rows="4"/ name="posttxt">{{tweet.post_text}}</textarea>
+        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="pstatus">
+          <option selected>Choose...</option>
+          <option value="posted" >Post</option>
+          <option value="rejected" >Dont post</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Done</button>
+    </div>
+</div>
+</form>
+{% endfor %}
+</div>  
+{% endblock base %}
